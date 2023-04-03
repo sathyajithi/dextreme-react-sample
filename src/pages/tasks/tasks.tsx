@@ -5,7 +5,7 @@ import DataGrid, {
   Pager,
   Paging,
   FilterRow,
-  Lookup
+  Lookup,
 } from 'devextreme-react/data-grid';
 
 export default function Task() {
@@ -80,13 +80,14 @@ export default function Task() {
         />
       </DataGrid>
     </React.Fragment>
-)}
+  );
+}
 
 const dataSource = {
   store: {
     type: 'odata',
     key: 'Task_ID',
-    url: 'https://js.devexpress.com/Demos/DevAV/odata/Tasks'
+    url: 'https://js.devexpress.com/Demos/DevAV/odata/Tasks',
   },
   expand: 'ResponsibleEmployee',
   select: [
@@ -97,13 +98,13 @@ const dataSource = {
     'Task_Status',
     'Task_Priority',
     'Task_Completion',
-    'ResponsibleEmployee/Employee_Full_Name'
-  ]
+    'ResponsibleEmployee/Employee_Full_Name',
+  ],
 };
 
 const priorities = [
   { name: 'High', value: 4 },
   { name: 'Urgent', value: 3 },
   { name: 'Normal', value: 2 },
-  { name: 'Low', value: 1 }
+  { name: 'Low', value: 1 },
 ];
