@@ -44,7 +44,7 @@ export default function SideNavOuterToolbar({ title, children }: React.PropsWith
         : prevMenuStatus
     );
     return menuStatus === MenuStatus.Closed ? true : false;
-  }, [isLarge]);
+  }, [isLarge]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const onNavigationChanged = useCallback(({ itemData, event, node }: ItemClickEvent) => {
     if (menuStatus === MenuStatus.Closed || !itemData?.path || node?.selected) {

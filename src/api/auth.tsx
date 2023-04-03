@@ -1,6 +1,6 @@
 import defaultUser from '../utils/default-user';
 
-const testLogin = true;
+const testLogin = false;
 
 export async function signIn(email: string, password: string) {
   try {
