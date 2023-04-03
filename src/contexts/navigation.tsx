@@ -21,7 +21,7 @@ function withNavigationWatcher(Component: React.ElementType, path: string) {
 
     useEffect(() => {
       setNavigationData!({ currentPath: path });
-    }, [path, setNavigationData]);
+    }, [path, setNavigationData]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return <Component {...props} />;
   }

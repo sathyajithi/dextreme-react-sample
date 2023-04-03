@@ -1,5 +1,7 @@
 import defaultUser from '../utils/default-user';
 
+const testLogin = true;
+
 export async function signIn(email: string, password: string) {
   try {
     // Send request
@@ -21,6 +23,13 @@ export async function signIn(email: string, password: string) {
 export async function getUser() {
   try {
     // Send request
+
+    // TODO - implement user login
+    if (testLogin) {
+      return {
+        isOk: false,
+      };
+    }
 
     return {
       isOk: true,
