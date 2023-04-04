@@ -6,7 +6,9 @@ import DataGrid, {
   Paging,
   FilterRow,
   Lookup,
+  MasterDetail,
 } from 'devextreme-react/data-grid';
+import { DetailTable } from '../../components';
 
 export default function Task() {
   return (
@@ -78,6 +80,7 @@ export default function Task() {
           caption={'Completion'}
           hidingPriority={0}
         />
+        <MasterDetail enabled={true} component={DetailTable} />
       </DataGrid>
     </React.Fragment>
   );
